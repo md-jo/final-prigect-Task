@@ -11,7 +11,7 @@ namespace ConsoleApplication17
     {
         static void Main(string[] args)
         {
-            ArrayList tasks = new ArrayList();
+           
             
             Task t1 = new Task();
 
@@ -25,28 +25,28 @@ namespace ConsoleApplication17
                 case 1:
                     Console.WriteLine("enter name of the task to add");
                     t1.name = Console.ReadLine();
-                    TaskManager.AddTask(t1,tasks);
+                    TaskManager.AddTask(t1);
                     goto key;
                     break;
                 case 2:
                     Console.WriteLine("enter name of the task to delete");
                     t1.name = Console.ReadLine();
-                    TaskManager.DeleteTask(t1,tasks);
+                    TaskManager.DeleteTask(t1);
                     goto key;
                     break;
                 case 3:
                     Console.WriteLine("enter name of the task ");
                     t1.name = Console.ReadLine();
-                    TaskManager.SearchForTask(t1,tasks);
+                    TaskManager.SearchForTask(t1);
                     goto key;
                     break;
                 case 4:
                     t1.PrintTask();
                     goto key;
                     break;
-                case 5:foreach(var i in tasks)
-            Console.WriteLine(i);
-                    break;
+            //    case 5:foreach(var i in tasks)
+          //  Console.WriteLine(i);
+               //     break;
             }
 
             
