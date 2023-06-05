@@ -10,19 +10,28 @@ namespace ConsoleApplication17
     static class TaskManager
     {
          static ArrayList tasks = new ArrayList();
+        
        public static  void AddTask(Task t1)
         {
-            tasks.Add(t1);
+            string Name = t1.name;
+            tasks.Add(Name);
       
         }
          public static void DeleteTask(Task t1)
         {
-            tasks.Remove(t1);
+            string Name = t1.name;
+            tasks.Remove(Name);
         }
-         public static bool SearchForTask(Task t1)
+         public static void SearchForTask(Task t1)
         {
-            return tasks.IndexOf(t1) >= 0 ? true : false; 
-            
+            string Name = t1.name;
+            int index = tasks.IndexOf(Name) ;
+                        if (index > -1)
+            {
+                Console.WriteLine("the index of Task = " +index);
+            }
+            else
+                Console.WriteLine("there is no Task by this name ");
         }
     }
 }
