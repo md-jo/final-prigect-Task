@@ -17,7 +17,7 @@ namespace ConsoleApplication17
 
             int key;
 
-            Console.WriteLine("enter the opertion  1 to add   or 2 to delete  or 3 to search  or 4 to print  or 5 to print-Arraylist");
+            Console.WriteLine("enter the opertion  1 to add   or 2 to delete  or 3 to search  or 4 to print  ");
         key:
             int op = Convert.ToInt32(Console.ReadLine());
             switch (op)
@@ -44,9 +44,7 @@ namespace ConsoleApplication17
                     t1.PrintTask();
                     goto key;
                     break;
-            //    case 5:foreach(var i in tasks)
-          //  Console.WriteLine(i);
-               //     break;
+         
             }
 
             
